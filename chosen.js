@@ -71,12 +71,12 @@
               origRender();
               return initOrUpdate();
             };
-            if (attr.multiple) {
-              viewWatch = function() {
-                return ngModel.$viewValue;
-              };
-              scope.$watch(viewWatch, ngModel.$render, true);
-            }
+           
+            viewWatch = function() {
+              return ngModel.$viewValue;
+            };
+            scope.$watch(viewWatch, ngModel.$render, true);
+            
           } else {
             initOrUpdate();
           }
